@@ -1,4 +1,4 @@
-# 669px AI
+# byte4day AI
 
 **A personal AI operating system providing a persistent, multimodal, voice-first interface between a user and their digital and physical environment.**
 
@@ -21,7 +21,7 @@ Nothing in this repository should be assumed to work unless marked `Implemented`
 
 ## Overview
 
-669px AI is not a chatbot wrapper. It is an orchestration layer that sits between a user, one or more LLM providers, a persistent memory store, a set of specialized agents, and the external tools and data sources those agents need to act on the user's behalf.
+byte4day AI is not a chatbot wrapper. It is an orchestration layer that sits between a user, one or more LLM providers, a persistent memory store, a set of specialized agents, and the external tools and data sources those agents need to act on the user's behalf.
 
 The primary interaction surface is voice, delivered through wireless earbuds and wearable hardware, with optional vision input from a wearable camera. Behind that interface, the system separates reasoning (LLM), computation (decision engine), state (memory), and execution (agents/tools) into independent, replaceable components.
 
@@ -36,7 +36,7 @@ The long-term goal is an intelligent operating layer that:
 - Extends its own capabilities in a controlled, auditable, reversible way
 - Treats security and user consent as non-negotiable, not bolted on afterward
 
-669px AI does not attempt to be omniscient. It makes calculated recommendations with explicit confidence and uncertainty, asks for clarification when it doesn't have enough information, and defers to the user on anything risky or irreversible.
+byte4day AI does not attempt to be omniscient. It makes calculated recommendations with explicit confidence and uncertainty, asks for clarification when it doesn't have enough information, and defers to the user on anything risky or irreversible.
 
 ## Core Capabilities
 
@@ -58,7 +58,7 @@ The long-term goal is an intelligent operating layer that:
 
 ## Architecture
 
-669px AI is organized around a single principle: **the LLM is one component, not the system.** Reasoning, memory, computation, execution, and security are separate subsystems that communicate through defined interfaces, so any one of them (including the model provider) can be replaced without a rewrite.
+byte4day AI is organized around a single principle: **the LLM is one component, not the system.** Reasoning, memory, computation, execution, and security are separate subsystems that communicate through defined interfaces, so any one of them (including the model provider) can be replaced without a rewrite.
 
 ```
 User → Wearable Interface → ESP32 → Secure Backend → AI Orchestrator → Agents → Tools/APIs → Decision Engine → Response
@@ -204,7 +204,7 @@ Vision introduces constraints that voice alone does not:
 
 **Status: Planned**
 
-669px AI treats the LLM as a replaceable reasoning component behind a provider-agnostic adapter, not as the system itself. The following are kept as separate subsystems so that a model or provider swap does not require touching them:
+byte4day AI treats the LLM as a replaceable reasoning component behind a provider-agnostic adapter, not as the system itself. The following are kept as separate subsystems so that a model or provider swap does not require touching them:
 
 - LLM reasoning (the adapter boundary)
 - Deterministic computation (decision engine)
@@ -315,7 +315,7 @@ flowchart TD
 
 **Status: Experimental (design only)**
 
-669px AI is designed to support controlled creation of new capabilities in response to a user request such as "create a feature that monitors X," without giving generated code unrestricted access to production.
+byte4day AI is designed to support controlled creation of new capabilities in response to a user request such as "create a feature that monitors X," without giving generated code unrestricted access to production.
 
 ```mermaid
 flowchart LR
@@ -442,7 +442,7 @@ Permissions are capability-based: an agent is granted only the specific tool cal
 ## Repository Structure
 
 ```
-669px-ai/
+byte4day-ai/
 ├── apps/
 │   ├── voice-client/          # Wearable-facing client application
 │   ├── mobile-companion/      # Configuration, memory inspection, controls
